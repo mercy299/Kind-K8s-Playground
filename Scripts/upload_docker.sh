@@ -4,19 +4,15 @@
 
 # Assumes that an image is built via `run_docker-compose.sh`
 
-# Step 1:
 # Create dockerpath
 dockerpath=kind-app
-
-# Step 2:  
+  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
 docker login -u aniekeme01
 
-#Step 3:
 # Tag the images with your Docker ID
 docker tag $dockerpath:latest aniekeme01/$dockerpath
 
-# Step 4:
 # Push image to a docker repository
 docker push aniekeme01/$dockerpath
