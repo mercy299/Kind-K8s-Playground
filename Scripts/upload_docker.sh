@@ -11,12 +11,12 @@ dockerpath=kind-app
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-docker login -u favoureva
+docker login -u aniekeme01
 
 #Step 3:
 # Tag the images with your Docker ID
-docker tag $dockerpath:latest favoureva/$dockerpath
+docker tag $dockerpath:latest aniekeme01/$dockerpath
 
 # Step 4:
 # Push image to a docker repository
-docker push favoureva/$dockerpath
+docker push aniekeme01/$dockerpath

@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: app-deployment
+
+spec:
+  replicas: 2  # Maintain a single replica of the Pod.
+
+  selector:
+    matchLabels:
+      app: app-deployment  # Select Pods with the label "app: app-deployment".
+
+  template:
+    metadata:
+      labels:
+        app: app-deployment  # Pods created will be labeled as "app: app-deployment".
+
+    spec:
+      containers:
+        - name: app-deployment
+          image: maiempire/kind-app:latest  # Use the latest Docker image for this container.
+          ports:
+            - containerPort: 3000  # Expose port 3000 within the Pod.
+          name: app-deployment  # Name of the container (can differ from the Pod name).
