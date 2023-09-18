@@ -52,4 +52,4 @@ kubectl cluster-info
 # Step 12:
 # Print cluster deployment completion messages
 echo "Kind cluster '$CLUSTER_NAME' is deployed and ready for use."
-echo "Kubeconfig is available at: $KUBECONFIG_PATH"c
+echo "Kubeconfig is available at: $KUBECONFIG_PATH"
