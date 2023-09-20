@@ -11,7 +11,7 @@ spec:
     app: app-deployment  # Routes traffic to Pods with the "app" label set to "app-deployment."
 
   ports:
-    - name: app-deployment  # The name assigned to this port, which is "app-deployment."
+    - name: app-service-http  # The name assigned to this port, which is "app-deployment."
       protocol: TCP  # This port uses the TCP protocol.
       port: 5000  # The Service listens on port 5000.
       targetPort: 3000  # Forwards traffic to Pods' port 3000.

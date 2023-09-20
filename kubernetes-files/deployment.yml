@@ -22,4 +22,4 @@ spec:
           image: aniekeme01/kind-app:latest  # Use the latest Docker image for this container.
           ports:
             - containerPort: 3000  # Expose port 3000 within the Pod.
-              name: app-deployment  # Name of the container (can differ from the Pod name).
+              name: app-deployment-http  # Name of the container (can differ from the Pod name).
